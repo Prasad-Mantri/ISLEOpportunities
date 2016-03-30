@@ -8,6 +8,7 @@ var port = process.env.port || 8080;
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash = require ('connect-flash');
+var nodemailer=require('nodemailer');
 
 var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -15,6 +16,42 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 
 var configDB = require('./config/database.js');
+
+// Configuring nodemailer on SMTP server. SMTP is responsible for sending and recieving emails
+var smtpTransport=nodemailer.createTransport("SMTP",{
+	service : "Gmail",
+	auth: {
+		user : "thedesignercatlr@gmail.com",
+		pass: "thedesignercatlr123"
+	}
+});
+
+//var random, mailOptions, host, link;
+//SEND EMAIL
+app.get('/send',function(req,res){
+	var mailOptions={
+		to: "thecodercatlr@gmail.com",
+		from: "thedesignercatlr@gmail.com",
+		subject: 'Confirm your account'
+
+	}
+	console.log(mailOptions);
+	smtpTransport.sendMail(mailOptions,function(error,response){
+		if(error){
+				console.log(error);
+			res.end("error");
+		}else{
+				console.log("Message sent : "+response.message);
+			res.end("sent");
+		}
+
+		});
+	res.render('send.ejs');
+	});
+
+
+/*===================================SMTP OVER===============================*/
+
 
 //configuration ==========================================
 mongoose.connect(configDB.url); //connecting to database
