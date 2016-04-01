@@ -110,6 +110,9 @@ $("input[name='studentRole']").click(function() {
 
    var elem = $("input[name=studentRole]:checked");
    var opt=	$("input[name=studentRole]:checked").val();
+
+
+
     if(opt=="Other Attendee")
      {
         $("#otherLeaderText").css({'display': 'none'});
@@ -128,6 +131,9 @@ $("input[name='studentRole']").click(function() {
 
      }
 
+
+
+
    if(elem.hasClass("attendee")==true)
     {
       $("#roleSpecific").css({'display': 'block'});
@@ -138,15 +144,60 @@ $("input[name='studentRole']").click(function() {
         {
               
            $("#roleSpecific").append("<div id='innerRole'></div>");
-               var hdr = "<p>Role for your selection: Participant Role</p>";  
-               var radioButton1 = "<input type='radio' name='participantRole' class='rad' value='Attendee' > <br />";
-               var radioButton2 = "<input type='radio' name='participantRole' class='rad' value='Mentee' > <br />";
-               var radioButton3 = "<input type='radio' name='participantRole' class='rad' value='Other participent ' > <br />";
-             $("#innerRole").append(hdr,radioButton1,radioButton2,radioButton3); 
+           participantFunction();
+               
+        }
+        else
+        {
+            $("#innerRole").empty();
+            participantFunction();
+
+        }
+    }
+
+
+    if(elem.hasClass("Presenter")==true)
+    {
+      
+      $("#roleSpecific").css({'display': 'block'});
+        var eleLength = $("#innerRole").length;
+        if (eleLength<1)
+        {
+          $("#roleSpecific").append("<div id='innerRole'></div>");
+          presenterFunction();
         }
 
-         
-    }
+        else
+        {
+              $("#innerRole").empty();
+              presenterFunction();
+        }
+              
+      }
+
+     if(elem.hasClass("Researcher")==true)
+      {
+          $("#roleSpecific").css({'display': 'block'});
+
+        var eleLength = $("#innerRole").length;
+        if (eleLength<1)
+        {
+          $("#roleSpecific").append("<div id='innerRole'></div>");
+          researcherFunction();
+        }
+
+        else
+        {
+              $("#innerRole").empty();
+              researcherFunction();
+        }
+      
+
+
+
+
+      }
+     
 
 
 
@@ -154,3 +205,29 @@ $("input[name='studentRole']").click(function() {
 
 
 });
+
+function presenterFunction()
+{
+           var hdr = "<p>Role for your selection: Presenter Role</p>"; 
+              $("#innerRole").append(hdr);
+}
+
+function participantFunction()
+{
+               var hdr = "<p>Role for your selection: Participant Role</p>";  
+               var radioButton1 = "<input type='radio' name='participantRole' class='rad' value='Attendee' >Attendee <br />";
+               var radioButton2 = "<input type='radio' name='participantRole' class='rad' value='Mentee' >Mentee <br />";
+               var radioButton3 = "<input type='radio' name='participantRole' class='rad' value='Other participant' >Other participant <br />";
+             $("#innerRole").append(hdr,radioButton1,radioButton2,radioButton3); 
+}
+
+function researcherFunction()
+{
+               var hdr = "<p>Role for your selection: Researcher Role</p>";  
+               var radioButton1 = "<input type='radio' name='researcherRole' class='rad' value='Lab Manager' >Lab Manager automatically selected engagement level = 3 - Generative Engagement <br />";
+               var radioButton2 = "<input type='radio' name='researcherRole' class='rad' value='Research Assistant' >Research Assistant  automatically selected engagement = 2 - Active Engagement <br />";
+               var radioButton3 = "<input type='radio' name='researcherRole' class='rad' value='Lab Assistant' >Lab Assistant automatically selected engagement = 2 - Active Engagement <br />";
+               var radioButton4 = "<input type='radio' name='researcherRole' class='rad' value='Other Researcher' >Other researcher role (please specify) <br />";
+             $("#innerRole").append(hdr,radioButton1,radioButton2,radioButton3,radioButton4); 
+}
+
