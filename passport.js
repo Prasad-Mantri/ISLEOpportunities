@@ -33,7 +33,7 @@ module.exports = function(passport){
 	// LOCAL SIGNUP ===============================================
 	//=============================================================
 
-	passport.use('local-signup',new LocalStrategy({
+	/*passport.use('local-signup',new LocalStrategy({
 
 		//by default, local strategy uses username and password
 		//firstnameField : 'fname',
@@ -83,7 +83,7 @@ module.exports = function(passport){
 		});
 	
 
-	}));
+	}));*/
 
 	//==============================================================================
 	//LOCAL LOGIN =================================================================
