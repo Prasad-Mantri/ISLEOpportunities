@@ -24,7 +24,7 @@
 </ul>
 </div>  <!-- Content Div -->
 <div class="main">
-<form action="" class="regform" method="get">
+<form action="" class="regform" method="post">
 <!-- Progress Bar -->
 <div id="formFields">
 <!-- Fieldsets -->
@@ -103,7 +103,7 @@
 </fieldset>
 
 
-<fieldset>
+<fieldset class="part2">
 <h2 class="title">Opportunity Builder</h2>
 <p class="subtitle">Step 2</p>
 <div>This section describes the specifically targeted areas of growth that students will experience by participating in the opportunity, and how the growth will be fostered. The information in this section includes: A) Dimensions, B) Skills, and C) Action Statements. These three components are defined in the diagram below.</div>
@@ -164,7 +164,7 @@ Intellectual Agility <br />
 <input class="next_btn" name="next" type="button" value="Next">
 </fieldset>
 
-<fieldset>
+<fieldset >
 <h2 class="title">Opportunity Builder</h2>
 <p class="subtitle">Step 2</p>
 <h3>B. Skill(s): </h3>
@@ -200,23 +200,70 @@ Intellectual Agility <br />
 
 <b><input  type="radio" name="studentRole" class="rad Presenter" value="Deliver a performance, exhibit, demonstration, or presentation" > Deliver a performance, exhibit, demonstration, or presentation (Role = Presenter)</b><br />
 <b><input  type="radio" name="studentRole" class="rad Researcher" value="Conduct Research" > Conduct Research (Role = Researcher) </b> <br />
-<b><input  type="radio" name="studentRole" class="rad Maker" value="Complete a non-research project" > Complete a non-research project (Role = Maker) </b> <br /> <br />
+<b><input  type="radio" name="studentRole" class="rad Maker" value="Complete a non-research project" > Complete a non-research project (Role = Maker) </b> 
+<br /> <br />
 
 <b>Serve as a leader (Role = Leader) </b><br />
 <div class="StudentRoleDiv">
-<input type="radio" name="studentRole" class="rad" value="Orientation leader" > Orientation leader <br />
-<input type="radio" name="studentRole" class="rad" value="Undergraduate TA" > Undergraduate TA <br />
-<input type="radio" name="studentRole" class="rad" value="Ambassador" > Ambassador <br />
-<input type="radio" name="studentRole" class="rad" value="Health educator" > Health educator <br />
-<input type="radio" name="studentRole" class="rad" value="RA" > RA <br />
-<input type="radio" name="studentRole" class="rad" value="Mentor" > Mentor <br />
-<input type="radio" name="studentRole" class="rad" value="Facilitator" > Facilitator <br />
-<input type="radio" name="studentRole" class="rad" value="Teacher" > Teacher <br />
-<input type="radio" name="studentRole" class="rad" value="Tutor" > Tutor <br />
-<input type="radio" name="studentRole" class="rad" value="Other Leader" > Other <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Orientation leader" > Orientation leader <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Undergraduate TA" > Undergraduate TA <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Ambassador" > Ambassador <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Health educator" > Health educator <br />
+<input type="radio" name="studentRole" class="rad Leader" value="RA" > RA <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Mentor" > Mentor <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Facilitator" > Facilitator <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Teacher" > Teacher <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Tutor" > Tutor <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Other Leader" > Other <br />
 <input id="otherLeaderText" class="text_field" name="studentRole" placeholder="Type here if Other selected for Leader Role" type="text" hidden Mandatory>
-<br />
 </div>
+<br />
+
+<b>Volunteer (Role = Volunteer)</b>
+<div class="StudentRoleDiv">
+<input type="radio" name="studentRole" class="rad Volunteer" value="Volunteer service (on-campus)" > Volunteer service (on-campus) <br />
+<input type="radio" name="studentRole" class="rad Volunteer" value="Volunteer service (off-campus)" > Volunteer service (off-campus) <br />
+<input type="radio" name="studentRole" class="rad Volunteer" value="Alternative Spring Break" > Alternative Spring Break <br />
+</div>
+<br />
+
+<b><input  type="radio" name="studentRole" class="rad Club" value="Join a Club" > Join a Club </b>
+ <br />
+  <br />
+
+<b>Join a Sports Team</b>
+<div class="StudentRoleDiv">
+<input type="radio" name="studentRole" class="rad Team" value="Club" > Club <br />
+<input type="radio" name="studentRole" class="rad Team" value="Varsity" > Varsity <br />
+<input type="radio" name="studentRole" class="rad Team" value="Intramural" > Intramural <br /><br />
+</div>
+
+
+<b>Go on co-op</b>
+<div class="StudentRoleDiv">
+<input type="radio" name="studentRole" class="rad Coop" value="North America" >  North America <br />
+<input type="radio" name="studentRole" class="rad Coop" value="South America" > South America <br />
+<input type="radio" name="studentRole" class="rad Coop" value="Asia" > Asia <br />
+<input type="radio" name="studentRole" class="rad Coop" value="Europe" > Europe <br />
+<input type="radio" name="studentRole" class="rad Coop" value="Africa" > Africa <br />
+<input type="radio" name="studentRole" class="rad Coop" value="Antarctica" > Antarctica <br />
+<input type="radio" name="studentRole" class="rad Coop" value="Australia" > Australia <br /><br />
+</div>
+
+<b><input type="radio" name="studentRole" class="rad Employment" value="Find employment" > Find employment </b>
+
+ <br />
+  <br />
+
+<b><input type="radio" name="studentRole" class="rad Internship" value="Find an internship" > Find an internship </b>
+
+ <br />
+  <br />  
+
+<b></b>
+
+<input id="otherOpportunity" type="radio" name="studentRole" class="rad OtherOpportunityType" value="Other Opportunity Type"> <b> Other (please specify)</b> <br />
+ <input id="otherOpportunityText" class="text_field" name="studentRole" placeholder="Type here if Other selected for Opportunity Type" type="text" hidden Mandatory>
 
 <div id="roleSpecific" >
 
@@ -237,10 +284,52 @@ Intellectual Agility <br />
 
 
 <fieldset>
-<h2 class="title">Opportunity Type</h2>
-<p class="subtitle">Step 3</p>
-<input class="text_field" name="fname" placeholder="First Name" type="text">
-<input class="text_field" name="lname" placeholder="Last Name" type="text">
+<h2 class="title">Requirements and Logistics</h2>
+<p class="subtitle">Step 4</p>
+<h4>Is there an application or registration due date?</h4>
+<input type="radio" name="applicationDueDate" class="rad" value="No" > No <br />
+<input type="radio" name="applicationDueDate" class="rad" id="dueDateYes" value="Yes" > Yes. 
+Application due date: <input type="date" id="pickDate" name="Duedate" disabled> <br />
+<input type="radio" name="applicationDueDate" class="rad" value="To be determined" > To be determined. <br /><br />
+
+
+<h4>Will the student be paid?</h4>
+<input type="radio" name="studentPaid" class="rad" value="No" > No <br />
+<input type="radio" name="studentPaid" class="rad" value="Yes" > Yes. <br /><br /> 
+
+
+<h4>URL to be linked for additional details?</h4>
+<input type="radio" name="additionalDetails" class="rad" value="Not Applicable" > Not Applicable <br />
+<input type="radio" name="additionalDetails" class="rad" id="dueDateYes" value="URL" > URL: 
+<input type="text" id="url" name="additionalDetails" placeholder="Enter URL here" disabled> <br /><br />
+
+<h4>Will student engagement in this opportunity have a specific start and end date? </h4>
+<input type="radio" name="specificDuration" class="rad" value="No" > No <br />
+<input type="radio" name="specificDuration" class="rad" value="Yes" > Yes. <br /><br /> 
+<div id="opportunityDuration" hidden>
+<h4>Organization Begin Date  (Leave blank if to be determined)</h4>
+<input type="date" id="durationBeginDate"><br /><br />
+<h4>Opportunity End Date (Leave blank if to be determined)</h4>
+<input type="date" id="durationEndDate"><br /><br />
+<h4>Will this opportunity recur?</h4>
+<input type="radio" name="recurOpportunity" class="rad" value="No" > No <br />
+<input type="radio" name="recurOpportunity" class="rad" value="Yes" > Yes. <br /><br /> 
+</div>
+
+
+<div id="recurQuestion" hidden>
+<h4>When will the opportunity recur?</h4>
+<input type="radio" name="recurTime" class="rad" value="Each Fall" > Each Fall <br />
+<input type="radio" name="recurTime" class="rad" value="Each Spring" > Each Spring <br />
+<input type="radio" name="recurTime" class="rad" value="Each Summer" > Each Summer <br />
+<input type="radio" name="recurTime" class="rad" value="Each Year" > Each Year <br />
+<input type="radio" name="recurTime" class="rad" value="Not sure" > Not sure <br />
+</div>
+
+
+<h4>Indicate the approximate amount of time a student should expect to spend engaging with the opportunity from beginning to end.</h4>
+	
+
 <br />
 <input class="pre_btn" type="button" value="Previous">
 <input class="submit_btn" type="submit" value="Submit">
