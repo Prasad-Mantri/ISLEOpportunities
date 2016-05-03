@@ -10,7 +10,7 @@ var passport = require('passport');
 var flash = require ('connect-flash');
 var nodemailer=require('nodemailer');
 var bcrypt = require('bcrypt-nodejs'); //changed
-var nev =require('email-verification')(mongoose);	//changed
+//var nev =require('email-verification')(mongoose);	//changed
 var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -136,7 +136,7 @@ mongoose.connect(configDB.url); //connecting to database
 
 require('./config/passport')(passport);//configuring with passport
 
-require('./config/nev')(nev);
+//require('./config/nev')(nev);
 //setting up the application
 
 app.use(morgan('dev')); //log every request to the console
@@ -228,7 +228,7 @@ app.use(flash()); // using connect-flash for displaying messages stored in sessi
 
 
 //routes=======================================================
-require('./app/routes.js')(app,nev,passport); //load routes and pass in app and fully configured passport
+require('./app/routes.js')(app,passport); //load routes and pass in app and fully configured passport
 
 //launch=======================================================
 app.listen(port);

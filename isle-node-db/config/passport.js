@@ -33,7 +33,7 @@ module.exports = function(passport){
 	// LOCAL SIGNUP ===============================================
 	//=============================================================
 
-	/*passport.use('local-signup',new LocalStrategy({
+	passport.use('local-signup',new LocalStrategy({
 
 		//by default, local strategy uses username and password
 		//firstnameField : 'fname',
@@ -48,17 +48,31 @@ module.exports = function(passport){
 		//User.findOne wont fire unless data is sent back
 		process.nextTick(function(){
 
+			 console.log(email);
+			 //var pattern=/^[a-z0-9]+[.]?[a-z0-9]+@husky\.neu\.edu$/;
+			 var pattern1=/[A-Za-z0-9@]+[.][A-Za-z0-9]+[@]?neu\.edu$/;
+			 var pattern2=/[A-Za-z0-9@]+[.][A-Za-z0-9]+\@husky\.neu\.edu$/;
+			 console.log(pattern1.test(email));
+
 			//find a user whose email is same as the forms email
 			//we are checking if user is trying to login already exists
 			User.findOne({'local.email' : email}, function(err,user){
+
+				console.log(user);
 
 				if(err)
 					return done(err);
 
 				//check if user exists
 				if(user){
+					console.log("user already present");
 					return done(null,false,req.flash('signupMessage','That email is already taken'));
-				} else {
+				} 
+
+				if(pattern1.test(email) || pattern2.test(email))
+
+				{
+					console.log("in if block");
 
 					//if there is no user with that email
 					//create the user
@@ -78,12 +92,15 @@ module.exports = function(passport){
 
 					});
 				}
-				
+				else{
+					console.log("in else");
+					return done(null,false,req.flash('signupMessage','Invalid email.Please enter your email ending in "neu.edu"'));
+				}
 			});
 		});
 	
 
-	}));*/
+	}));
 
 	//==============================================================================
 	//LOCAL LOGIN =================================================================

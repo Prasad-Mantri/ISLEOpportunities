@@ -1,6 +1,6 @@
 	//app/routes.js
 
-module.exports=function(app,nev,passport){
+module.exports=function(app,passport){
 	//===========================================
 	//INDEX PAGE
 	//===========================================
@@ -31,7 +31,7 @@ app.post('/login', passport.authenticate('local-login', {
 //================================================
 //show the signup form
 
-/*app.get('/signup',function(req,res){
+app.get('/signup',function(req,res){
 	//render the page and pass any flash data
 	res.render('signup.ejs', {message: req.flash('signupMessage')});
 });
@@ -44,20 +44,20 @@ app.post('/signup', passport.authenticate('local-signup',{
 	failureFlash : true //allow flash message {message: req.flash('signupMessage')}
 }));
 ///TAKEN FROM SIGNUP
-<!-- show any message that come back with authentication 
+/*<!-- show any message that come back with authentication 
 	<% if (message.length > 0) { %>
 		<div class = "alert alert-danger"><%= message %></div>
-		<% } %> -->
+		<% } %> -->*/
 
 
 
-*/ 
+ 
 
-
-app.get('/signup',function(req,res){
+// THIS SECTION HAS CODE FOR EMAIL VERIFICATIONS. BUGS PRESENT
+/* app.get('/signup',function(req,res){
 	res.render('signup.ejs');/*,{
 		root: __dirname
-	});*/
+	});
 	});
  app.post('/signup', function(req,res){
 
@@ -125,7 +125,7 @@ app.get('/signup',function(req,res){
        }
 
 
- 	});
+ 	}); */
 
 
 // ========================================================== 
