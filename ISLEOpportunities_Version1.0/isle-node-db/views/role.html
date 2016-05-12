@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ISLE Survey</title>
+<meta content="noindex, nofollow" name="robots">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="multiform.js"></script>
+</head>
+<body>
+<div class="content"><!-- Content Div -->
+<!-- Multistep Form -->
+<h2>ISLE Opportunity Builder</h2><br /><br />
+
+<ul id="progressbar">
+	
+<li>The basics</li>
+<li>Dimensions and Skills</li>
+<li class="active">Student Role</li>
+<li>Requirements and Logistics</li>
+
+</ul>
+</div> <!-- Content Div -->
+
+<div class="main">
+
+<!-- Progress Bar -->
+<div id="formFields">
+
+
+
+<form action="/role" class="regform" method="post">
+<fieldset>
+<h2 class="title">Student Role</h2>
+<p class="subtitle">Step 3</p>
+<h3> Through this opportunity, students will: </h3>
+<br /> <br />
+<b>Attend personal/professional development (Role = Attendee, Engagement Level = 1 - Receptive Engagement)  </b> <br />
+<div class="StudentRoleDiv">
+<input type="radio" name="studentRole" class="rad attendee" value="Retreat" > Retreat <br />
+<input type="radio" name="studentRole" class="rad attendee" value="Conference" > Conference <br />
+<input type="radio" name="studentRole" class="rad attendee" value="Training" > Training <br />
+<input type="radio" name="studentRole" class="rad attendee" value="Workshop" > Workshop <br />
+<input id="otherAttendee" type="radio" name="studentRole" class="rad attendee" value="Other Attendee" > Other <br />
+<input id="otherAttendeeText" class="text_field" name="Other_Attendee" placeholder="Type here if Other selected for Attendee Role" type="text" hidden Mandatory> <br />
+</div>
+
+<b><input  type="radio" name="studentRole" class="rad Presenter" value="Deliver a performance, exhibit, demonstration, or presentation" > Deliver a performance, exhibit, demonstration, or presentation (Role = Presenter)</b><br />
+<b><input  type="radio" name="studentRole" class="rad Researcher" value="Conduct Research" > Conduct Research (Role = Researcher) </b> <br />
+<b><input  type="radio" name="studentRole" class="rad Maker" value="Complete a non-research project" > Complete a non-research project (Role = Maker) </b> 
+<br /> <br />
+
+<b>Serve as a leader (Role = Leader) </b><br />
+<div class="StudentRoleDiv">
+<input type="radio" name="studentRole" class="rad Leader" value="Orientation leader" > Orientation leader <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Undergraduate TA" > Undergraduate TA <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Ambassador" > Ambassador <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Health educator" > Health educator <br />
+<input type="radio" name="studentRole" class="rad Leader" value="RA" > RA <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Mentor" > Mentor <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Facilitator" > Facilitator <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Teacher" > Teacher <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Tutor" > Tutor <br />
+<input type="radio" name="studentRole" class="rad Leader" value="Other Leader" > Other <br />
+<input id="otherLeaderText" class="text_field" name="studentRole" placeholder="Type here if Other selected for Leader Role" type="text" hidden Mandatory>
+</div>
+<br />
+
+<b>Volunteer (Role = Volunteer)</b>
+<div class="StudentRoleDiv">
+<input type="radio" name="studentRole" class="rad Volunteer" value="Volunteer service (on-campus)" > Volunteer service (on-campus) <br />
+<input type="radio" name="studentRole" class="rad Volunteer" value="Volunteer service (off-campus)" > Volunteer service (off-campus) <br />
+<input type="radio" name="studentRole" class="rad Volunteer" value="Alternative Spring Break" > Alternative Spring Break <br />
+</div>
+<br />
+
+<b><input  type="radio" name="studentRole" class="rad Club" value="Join a Club" > Join a Club </b>
+ <br />
+  <br />
+
+<b>Join a Sports Team</b>
+<div class="StudentRoleDiv">
+<input type="radio" name="studentRole" class="rad Team" value="Club" > Club <br />
+<input type="radio" name="studentRole" class="rad Team" value="Varsity" > Varsity <br />
+<input type="radio" name="studentRole" class="rad Team" value="Intramural" > Intramural <br /><br />
+</div>
+
+
+<b>Go on co-op</b>
+<div class="StudentRoleDiv">
+<input type="radio" name="studentRole" class="rad Coop" value="North America" >  North America <br />
+<input type="radio" name="studentRole" class="rad Coop" value="South America" > South America <br />
+<input type="radio" name="studentRole" class="rad Coop" value="Asia" > Asia <br />
+<input type="radio" name="studentRole" class="rad Coop" value="Europe" > Europe <br />
+<input type="radio" name="studentRole" class="rad Coop" value="Africa" > Africa <br />
+<input type="radio" name="studentRole" class="rad Coop" value="Antarctica" > Antarctica <br />
+<input type="radio" name="studentRole" class="rad Coop" value="Australia" > Australia <br /><br />
+</div>
+
+<b><input type="radio" name="studentRole" class="rad Employment" value="Find employment" > Find employment </b>
+
+ <br />
+  <br />
+
+<b><input type="radio" name="studentRole" class="rad Internship" value="Find an internship" > Find an internship </b>
+
+ <br />
+  <br />  
+
+<b></b>
+
+<input id="otherOpportunity" type="radio" name="studentRole" class="rad OtherOpportunityType" value="Other Opportunity Type"> <b> Other (please specify)</b> <br />
+ <input id="otherOpportunityText" class="text_field" name="studentRole" placeholder="Type here if Other selected for Opportunity Type" type="text" hidden Mandatory>
+
+<div id="roleSpecific" >
+
+
+
+</div>	
+
+
+<br />
+<input class="pre_btn" type="button" value="Previous">
+<input class="next_btn" name="next" type="submit" value="Next">
+</fieldset>
+</form>
+
+</div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ISLE Survey</title>
+<meta content="noindex, nofollow" name="robots">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="multiform.js"></script>
+</head>
+<body>
+<div class="content"><!-- Content Div -->
+<!-- Multistep Form -->
+<h2>ISLE Opportunity Builder</h2><br /><br />
+
+<ul id="progressbar">
+	
+<li>The basics</li>
+<li class="active">Dimensions and Skills</li>
+<li>Student Role</li>
+<li>Requirements and Logistics</li>
+
+</ul>
+</div> <!-- Content Div -->
+
+<div class="main">
+
+<!-- Progress Bar -->
+<div id="formFields">
+
+<form action="/dimensions" class="regform" method="post">
+<fieldset>
+<h2 class="title">Opportunity Builder</h2>
+<p class="subtitle">Step 2</p>
+<div>This section describes the specifically targeted areas of growth that students will experience by participating in the opportunity, and how the growth will be fostered. The information in this section includes: A) Dimensions, B) Skills, and C) Action Statements. These three components are defined in the diagram below.</div>
+
+<img id="dimensionDetails" src="images\dimensions.JPG" alt="Dimensions,Skills and Actions Diagram" />
+<h3>A. Dimension(s): </h3>
+<img id="dimensionImage" src="images\dimensionMain.JPG" alt="Dimensions" />
+<div id="dimensionInfo">Dimensions describe the major area of growth targeted by the opportunity. Each opportunity has a primary dimension.Some may have a secondary dimension as well.</div>
+ <br /><br />
+ <h4 id="primQuestion">What is the PRIMARY<span id="dimension"> dimension </span>of student growth that this opportunity will foster?</h4>
+ <div id="primSkilldiv">
+<input id="op1" type="radio" name="PrimDimension" class="rad primskill" value="Intellectual Agility">
+Intellectual Agility <br />
+
+
+<input id="op2" type="radio" name="PrimDimension" class="rad primskill" value="Global Mindset">Global Mindset<br />
+
+
+<input id="op3" type="radio" name="PrimDimension" class="rad primskill" value="Social Consciousness and Commitment" >Social Consciousness and Commitment<br />
+
+
+<input id="op4" type="radio" name="PrimDimension" class="rad primskill" value="Professional and Personal Effectiveness">Professional and Personal Effectiveness<br />
+
+<input id="op5" type="radio" name="PrimDimension" class="rad primskill" value="Well Being"> Well Being <br /><br />
+
+</div>
+<div id="infoText">
+
+
+
+
+
+</div>
+
+
+<div id="secSkill">
+ <h4>What is the SECONDARY dimension of student growth that this opportunity will foster (if applicable)?</h4>
+
+ <input type="radio" name="SecDimension" class="rad " value="Not Applicable" > Not Applicable <br />
+
+<input type="radio" name="SecDimension" class="rad " value="Intellectual Agility">Intellectual Agility<br />
+
+
+<input type="radio" name="SecDimension" class="rad " value="Global Mindset">Global Mindset<br />
+
+
+<input type="radio" name="SecDimension" class="rad " value="Social Consciousness and Commitment">Social Consciousness and Commitment<br />
+
+
+<input type="radio" name="SecDimension" class="rad " value="Professional and Personal Effectiveness">Professional and Personal Effectiveness<br />
+
+<input type="radio" name="SecDimension" class="rad " value="Well Being"> Well Being  <br /><br />
+</div>
+
+
+<input class="pre_btn" name="previous" type="button" value="Previous">
+<input class="clear_btn" name="clear" type="reset" value="Clear">
+<input class="next_btn" name="next" type="submit" value="Next">
+</fieldset>
+</form>
+
+</div>
+
+
+</div>
+
+</body>
+</html>

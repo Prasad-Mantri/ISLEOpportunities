@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ISLE Survey</title>
+<meta content="noindex, nofollow" name="robots">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="multiform.js"></script>
+</head>
+<body>
+<div class="content"><!-- Content Div -->
+<!-- Multistep Form -->
+<h2>ISLE Opportunity Builder</h2><br /><br />
+
+<ul id="progressbar">
+	
+<li class="active">The basics</li>
+<li>Dimensions and Skills</li>
+<li>Student Role</li>
+<li>Requirements and Logistics</li>
+
+</ul>
+</div> <!-- Content Div -->
+<div class="main">
+
+<!-- Progress Bar -->
+<div id="formFields">
+<form action="/basics" class="regform" method="post">	
+<!-- Fieldsets -->
+<fieldset id="first">
+
+<h2 class="title">The Basics</h2>
+<p class="subtitle">This section contains the opportunity title, description, and course information (if applicable).</p>
+<h3>A. Title and Description </h3>
+<input class="text_field" name="Title" placeholder="Opportunity Title" type="text">
+
+<textarea rows="5" cols="50" name="desc" placeholder="Opportunity Desciption"></textarea>
+<h4>Type of the opportunity: </h4>
+
+<b>An entire course </b><br /><br />
+
+<div id="entirecourse">
+<input type="radio" name="OppType" class="rad" value="Service-learning">Service-learning <br />
+<input type="radio" name="OppType" class="rad" value="Independent study">Independent study <br />
+<input type="radio" name="OppType" class="rad" value="Dialogue of Civilizations">Dialogue of Civilizations <br />
+<input type="radio" name="OppType" class="rad" value="Study Abroad">Study Abroad <br />
+<input type="radio" name="OppType" class="rad" value="Online">Online <br />
+<input type="radio" name="OppType" class="rad" value="Face-to-face">Face-to-face <br />
+<input type="radio" name="OppType" class="rad" value="Hybrid">Hybrid <br /> <br />
+</div>
+
+<div id="courseDetailsEntire">
+<h4>B. Course Information: </h4>
+
+<input class="text_field" name="CourseNumber" placeholder="Course Number" type="text">
+<input class="text_field" name="CourseTitle" placeholder="Course Title" type="text"> <br />
+<b>Select Session: </b><br />
+<input type="radio" name="sessionOpt" class="rad " value="Fall">Fall <br />
+<input type="radio" name="sessionOpt" class="rad " value="Spring">Spring <br />
+<input type="radio" name="sessionOpt" class="rad " value="Summer">Summer <br />
+<input type="radio" name="sessionOpt" class="rad " value="To be determined">To be determined <br />
+
+<h4>Instructor Details:  </h4>
+
+<input class="" name="last" placeholder="Last Name" type="text">
+<input class="" name="first" placeholder="First Name" type="text">
+<input id="singlechar" name="middle" placeholder="Middle initial" type="text" maxlength=1>
+<input class="text_field" name="InstructorEmailAddress" placeholder="Instructor Email Address" type="text">
+
+</div>
+
+
+<input id="withinCourse" type="radio" name="OppType" class="rad" value="An experience within a course"><b>An experience within a course</b><br /><br />
+
+<div id="courseDetailsWithin">
+<h4>B. Course Information: </h4>
+
+<input class="text_field" name="CourseNumberWithin" placeholder="Course Number" type="text">
+<input class="text_field" name="CourseTitleWithin" placeholder="Course Title" type="text"> <br />
+<b>Select Session: </b><br />
+<input type="radio" name="sessionOpt" class="rad " value="Fall">Fall <br />
+<input type="radio" name="sessionOpt" class="rad " value="Spring">Spring <br />
+<input type="radio" name="sessionOpt" class="rad " value="Summer">Summer <br />
+<input type="radio" name="sessionOpt" class="rad " value="To be determined">To be determined <br />
+
+<h4>Instructor Details:  </h4>
+
+<input class="" name="last" placeholder="Last Name" type="text">
+<input class="" name="first" placeholder="First Name" type="text">
+<input id="singlechar" name="middle" placeholder="Middle initial" type="text" maxlength=1>
+<input class="text_field" name="InstructorEmailAddress" placeholder="Instructor Email Address" type="text">
+
+</div>
+
+
+<input id="outsidecourse" type="radio" name="OppType" class="rad" value="An experience outside courses"><b>An experience outside courses</b> <br />
+
+
+<input class="clear_btn" name="clear" type="reset" value="Clear">
+
+<input class="next_btn" name="next" type="Submit" value="Next">
+
+</fieldset>
+</form>
+
+</div>
+
+
+</div>
+
+</body>
+</html>

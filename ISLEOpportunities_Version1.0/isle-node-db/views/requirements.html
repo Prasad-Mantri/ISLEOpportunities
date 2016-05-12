@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ISLE Survey</title>
+<meta content="noindex, nofollow" name="robots">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="multiform.js"></script>
+</head>
+<body>
+<div class="content"><!-- Content Div -->
+<!-- Multistep Form -->
+<h2>ISLE Opportunity Builder</h2><br /><br />
+
+<ul id="progressbar">
+	
+<li>The basics</li>
+<li>Dimensions and Skills</li>
+<li>Student Role</li>
+<li class="active">Requirements and Logistics</li>
+
+</ul>
+</div> <!-- Content Div -->
+
+<div class="main">
+
+<!-- Progress Bar -->
+<div id="formFields">
+
+
+
+<form action="fff.html" class="regform" method="post">
+<fieldset>
+<h2 class="title">Requirements and Logistics</h2>
+<p class="subtitle">Step 4</p>
+<h4>Is there an application or registration due date?</h4>
+<input type="radio" name="applicationDueDate" class="rad" value="No" > No <br />
+<input type="radio" name="applicationDueDate" class="rad" id="dueDateYes" value="Yes" > Yes. 
+Application due date: <input type="date" id="pickDate" name="Duedate" disabled> <br />
+<input type="radio" name="applicationDueDate" class="rad" value="To be determined" > To be determined. <br /><br />
+
+
+<h4>Will the student be paid?</h4>
+<input type="radio" name="studentPaid" class="rad" value="No" > No <br />
+<input type="radio" name="studentPaid" class="rad" value="Yes" > Yes. <br /><br /> 
+
+
+<h4>URL to be linked for additional details?</h4>
+<input type="radio" name="additionalDetails" class="rad" value="Not Applicable" > Not Applicable <br />
+<input type="radio" name="additionalDetails" class="rad" id="dueDateYes" value="URL" > URL: 
+<input type="text" id="url" name="additionalDetails" placeholder="Enter URL here" disabled> <br /><br />
+
+<h4>Will student engagement in this opportunity have a specific start and end date? </h4>
+<input type="radio" name="specificDuration" class="rad" value="No" > No <br />
+<input type="radio" name="specificDuration" class="rad" value="Yes" > Yes. <br /><br /> 
+<div id="opportunityDuration" hidden>
+<h4>Organization Begin Date  (Leave blank if to be determined)</h4>
+<input type="date" id="durationBeginDate"><br /><br />
+<h4>Opportunity End Date (Leave blank if to be determined)</h4>
+<input type="date" id="durationEndDate"><br /><br />
+<h4>Will this opportunity recur?</h4>
+<input type="radio" name="recurOpportunity" class="rad" value="No" > No <br />
+<input type="radio" name="recurOpportunity" class="rad" value="Yes" > Yes. <br /><br /> 
+</div>
+
+
+<div id="recurQuestion" hidden>
+<h4>When will the opportunity recur?</h4>
+<input type="radio" name="recurTime" class="rad" value="Each Fall" > Each Fall <br />
+<input type="radio" name="recurTime" class="rad" value="Each Spring" > Each Spring <br />
+<input type="radio" name="recurTime" class="rad" value="Each Summer" > Each Summer <br />
+<input type="radio" name="recurTime" class="rad" value="Each Year" > Each Year <br />
+<input type="radio" name="recurTime" class="rad" value="Not sure" > Not sure <br />
+</div>
+
+
+<h4>Indicate the approximate amount of time a student should expect to spend engaging with the opportunity from beginning to end.</h4>
+
+	
+
+<br />
+<input class="pre_btn" type="button" value="Previous">
+<input class="submit_btn" type="submit" value="Submit">
+</fieldset>
+</form>
+
+</div>
+
+
+</div>
+
+</body>
+</html>
