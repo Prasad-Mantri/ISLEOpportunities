@@ -71,6 +71,7 @@ return true;
 });
 
 
+//Display all course information option based on User Selection for the basics web page.
 $("input[name='OppType']").click(function() { 
 
 $("#courseDetailsWithin").css({'display': 'none'});
@@ -95,6 +96,7 @@ $("#courseDetailsWithin").css({'display': 'none'});
  });
 
 
+// Tooltip Text and Logic for Dimension page
 
 $('[data-toggle="tooltip"]').tooltip();  
 
@@ -122,339 +124,78 @@ $("#infoText").mouseout(function() {
 });
 
 
-$("input[name='studentRole']").click(function() { 
 
-   var elem = $("input[name=studentRole]:checked");
-   var opt=	$("input[name=studentRole]:checked").val();
+//Location Parameter logic on requirements page
 
+$("input[name='location']").click(function() { 
 
-
-    if(opt=="Other Attendee")
-     {
-        $("#otherLeaderText").css({'display': 'none'});
-        $("#otherAttendeeText").css({'display': 'block'});
-     }
-
-  else if (opt=="Other Leader")
-     {
-  	    $("#otherAttendeeText").css({'display': 'none'});
-        $("#otherLeaderText").css({'display': 'block'});
-     }
-     else
-      {
-        $("#otherAttendeeText").css({'display': 'none'});
-        $("#otherLeaderText").css({'display': 'none'});
-
-     }
-
-
-
-
-   if(elem.hasClass("attendee")==true)
-    {
-      $("#roleSpecific").css({'display': 'block'});
-
-        var eleLength = $("#innerRole").length;
-          
-       if (eleLength<1)
-        {
-              
-           $("#roleSpecific").append("<div id='innerRole'></div>");
-           participantFunction();
-               
-        }
-        else
-        {
-            $("#innerRole").empty();
-            participantFunction();
-
-        }
-    }
-
-
-    if(elem.hasClass("Presenter")==true)
-    {
-      
-      $("#roleSpecific").css({'display': 'block'});
-        var eleLength = $("#innerRole").length;
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-          presenterFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-              presenterFunction();
-        }
-              
-      }
-
-     if(elem.hasClass("Researcher")==true)
-      {
-          $("#roleSpecific").css({'display': 'block'});
-
-        var eleLength = $("#innerRole").length;
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-          researcherFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-              researcherFunction();
-        }
-      
-
-      }
-
-
-        if(elem.hasClass("Maker")==true)
-    {
-      
-      $("#roleSpecific").css({'display': 'block'});
-        var eleLength = $("#innerRole").length;
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-          makerFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-              makerFunction();
-        }
-              
-      }
-     
-
-
-
-
-        if(elem.hasClass("Leader")==true)
-        {
-      
-      $("#roleSpecific").css({'display': 'block'});
-        var eleLength = $("#innerRole").length;
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-          leaderFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-              leaderFunction();
-        }
-              
-      }
-
-    if(elem.hasClass("Volunteer")==true)
-      {
-          $("#roleSpecific").css({'display': 'block'});
-
-        var eleLength = $("#innerRole").length;
-
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-             volunteerFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-              volunteerFunction();
-        }
-      
-
-      }
-
-
-if(elem.hasClass("Club")==true)
-      {
-          $("#roleSpecific").css({'display': 'block'});
-
-        var eleLength = $("#innerRole").length;
-
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-             clubFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-              clubFunction();
-        }
-      
-
-      }
-
-if(elem.hasClass("Team")==true)
-      {
-          $("#roleSpecific").css({'display': 'block'});
-
-        var eleLength = $("#innerRole").length;
-
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-             teamFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-              teamFunction();
-        }
-      
-
-      }
-
-  if(elem.hasClass("Coop")==true)
-      {
-          $("#roleSpecific").css({'display': 'block'});
-
-        var eleLength = $("#innerRole").length;
-
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-             coopFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-              coopFunction();
-        }
-      
-
-      }
-
-  if(elem.hasClass("Employment")==true)
-      {
-          $("#roleSpecific").css({'display': 'block'});
-
-        var eleLength = $("#innerRole").length;
-
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-             coopFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-              coopFunction();
-        }
-      
-
-      }
-
- if(elem.hasClass("Internship")==true)
-      {
-          $("#roleSpecific").css({'display': 'block'});
-
-        var eleLength = $("#innerRole").length;
-
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-             internshipFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-               internshipFunction();
-        }
-      
-
-      }
-
-
-
-
-   if(opt=="Other Opportunity Type")
-     {
-        $("#otherOpportunityText").css({'display': 'block'});
-         $("#roleSpecific").css({'display': 'block'});
-          var eleLength = $("#innerRole").length;
-
-
-        if (eleLength<1)
-        {
-          $("#roleSpecific").append("<div id='innerRole'></div>");
-              otherRoleFunction();
-        }
-
-        else
-        {
-              $("#innerRole").empty();
-                otherRoleFunction();
-        }
-
-     }    
-  else
-  {
-    $("#otherOpportunityText").css({'display': 'none'});
- }
-
-
-
-$("input[name='researcherRole']").click(function() { 
-
-  var rsValue = $("input[name='researcherRole']:checked").val();
+  var lValue = $("input[name='location']:checked").val();
   
 
-if(rsValue=="Other Researcher")
+if(lValue=="Off-Campus")
 {
-   $("#otherResearcherText").css({'display': 'block'});
+   $("#offcampusText").css({'display': 'block'});
    
 }
 else{
 
-  $("#otherResearcherText").css({'display': 'none'});
+   $("#offcampusText").css({'display': 'none'});
+   $("#offcampusText").val("");
   
 }
 
 
 });
 
+//GPA Parameter logic on requirements page
 
-$("input[name='participantRole']").click(function() { 
+$("input[name='gparequirement']").click(function() { 
 
-  var rsValue = $("input[name='participantRole']:checked").val();
-  
+  var lValue = $("input[name='gparequirement']:checked").val();
+   
+   
 
-if(rsValue=="Other participant")
+if(lValue=="Minimum GPA")
 {
-   $("#otherRParticipantText").css({'display': 'block'});
+
+   $("#gparequirementNumber").css({'display': 'block'});
    
 }
 else{
 
-  $("#otherRParticipantText").css({'display': 'none'});
+   $("#gparequirementNumber").css({'display': 'none'});
+   $("#gparequirementNumber").val("");
   
 }
 
 
 });
 
+//Academic level logic on requirements page
 
- }); <!-- studentRole-->
+$("input[name='academiclevel']").click(function() { 
+
+  var lValue = $("input[name='academiclevel']:checked").val();
+   
+
+if(lValue=="other")
+{
+
+    $("#otherTextAL").prop( "disabled", false );
+   
+}
+
+//if($(this).is( ":checked" ) == false)
+//{
+  //$("#otherTextAL").val("");
+//}
+
+ 
+});
 
 
 
+//Application Due Date logic on requirements page
 
 
 $("input[name='applicationDueDate']").click(function() { 
@@ -472,6 +213,7 @@ $("input[name='applicationDueDate']").click(function() {
   });
 
 
+//Additional details logic on requirements page
 $("input[name='additionalDetails']").click(function() { 
 
   if($("input[name=additionalDetails]:checked").val()=="URL")
@@ -487,6 +229,7 @@ $("input[name='additionalDetails']").click(function() {
   });
 
 
+//Specific Duration Logic on requirements page
 $("input[name='specificDuration']").click(function() { 
 
   
@@ -509,7 +252,7 @@ $("input[name='specificDuration']").click(function() {
       if($("input[name=recurOpportunity]:checked").val()=="Yes")
       {
               $("#recurQuestion").css({'display': 'block'});
-              alert($("#durationBeginDate").val());
+              
        }
       else
       {
@@ -522,98 +265,47 @@ $("input[name='specificDuration']").click(function() {
   });
 
 
+// Logic for academic major on requirements page.
+$("input[name='academicmajor']").click(function() { 
+
+  if($("input[name=academicmajor]:checked").val()=="restrictedmajors")
+
+  {
+      
+     $("input[name=academicmajornames]").prop( "disabled", false );
+
+  }
+  else
+  {
+
+     $("input[name=academicmajornames]").prop( "disabled", true );
+  }
+
+  
+  });
+
+
+// Logic for other requirements on requirements page.
+$("input[name='otherrequirement']").click(function() { 
+
+  if($("input[name=otherrequirement]:checked").val()=="Other Requirements")
+
+  {
+      
+     $("#otherrequirementdetails").prop( "disabled", false );
+
+  }
+  else
+  {
+
+     $("#otherrequirementdetails").prop( "disabled", true );
+     $("#otherrequirementdetails").val("");
+  }
+
+  
+  });
+
+
 
 });<!-- doc ready-->
 
-
-
-function presenterFunction()
-{
-           var hdr = "<p>Role for your selection: <b> Presenter Role </b></p>"; 
-              $("#innerRole").append(hdr);
-}
-
-function participantFunction()
-{
-               var hdr = "<p>Role for your selection: <b>Participant Role</b></p>";  
-               var radioButton1 = "<input type='radio' name='participantRole' class='rad' value='Attendee' >Attendee <br />";
-               var radioButton2 = "<input type='radio' name='participantRole' class='rad' value='Mentee' >Mentee <br />";
-               var radioButton3 = "<input type='radio' name='participantRole' class='rad' value='Other participant' >Other participant <br />";
-               var inputBox= "<input id='otherRParticipantText' class='text_field' name='participantRole' placeholder='Type here if Other selected for Participant Role' type='text' Mandatory hidden>";
-             $("#innerRole").append(hdr,radioButton1,radioButton2,radioButton3,inputBox); 
-}
-
-function researcherFunction()
-{
-               var hdr = "<p>Role for your selection: <b> Researcher Role </b></p>";  
-               var radioButton1 = "<input type='radio' name='researcherRole' class='rad' value='Lab Manager' >Lab Manager automatically selected engagement level = 3 - Generative Engagement <br />";
-               var radioButton2 = "<input type='radio' name='researcherRole' class='rad' value='Research Assistant' >Research Assistant  automatically selected engagement = 2 - Active Engagement <br />";
-               var radioButton3 = "<input type='radio' name='researcherRole' class='rad' value='Lab Assistant' >Lab Assistant automatically selected engagement = 2 - Active Engagement <br />";
-               var radioButton4 = "<input type='radio' name='researcherRole' class='rad' value='Other Researcher' >Other researcher role (please specify) <br />";
-              var inputBox= "<input id='otherResearcherText' class='text_field' name='researcherRole' placeholder='Type here if Other selected for Researcher Role' type='text' Mandatory hidden>";
-             $("#innerRole").append(hdr,radioButton1,radioButton2,radioButton3,radioButton4,inputBox); 
-}
-
-function makerFunction()
-{
-           var hdr = "<p>Role for your selection: <b> Maker Role </b></p>"; 
-              $("#innerRole").append(hdr);
-}
-
-function leaderFunction()
-{
-           var hdr = "<p>Role for your selection: <b> Leader Role </b></p>"; 
-              $("#innerRole").append(hdr);
-}
-
-function volunteerFunction()
-{
-               var hdr = "<p>Role for your selection: <b>Volunteer Role</b></p>";  
-               var radioButton1 = "<input type='radio' name='volunteerRole' class='rad' value='Volunteer Leader' > Volunteer Leader automatically selected level of engagement = 3 - Generative Engagement) <br />";
-               var radioButton2 = "<input type='radio' name='volunteerRole' class='rad' value='Volunteer Participant' > Volunteer Participant automatically selected level of engagement = 2 - Active Engagement)  <br />";
-               
-             $("#innerRole").append(hdr,radioButton1,radioButton2); 
-}
-
-function clubFunction()
-{
-               var hdr = "<p>Role for your selection: <b>Club Role</b></p>";  
-               var radioButton1 = "<input type='radio' name='clubRole' class='rad' value='Club Leader' >  Club Leader (automatically selected level of engagement = 3 - Generative Engagement) <br />";
-               var radioButton2 = "<input type='radio' name='clubRole' class='rad' value='Club Participant' > Club Participant (automatically selected level of engagement = 2 - Active Engagement) <br />";
-               
-             $("#innerRole").append(hdr,radioButton1,radioButton2); 
-}
-
-function teamFunction()
-{
-               var hdr = "<p>Role for your selection: <b>Team Role</b></p>";  
-               var radioButton1 = "<input type='radio' name='teamRole' class='rad' value='Team Leader' >  Team Leader (automatically selected level of engagement = 3 - Generative Engagement) <br />";
-               var radioButton2 = "<input type='radio' name='teamRole' class='rad' value='Team Participant' > Team Participant (automatically selected level of engagement = 2 - Active Engagement) <br />";
-               
-             $("#innerRole").append(hdr,radioButton1,radioButton2); 
-}
-
-function coopFunction()
-{
-           var hdr = "<p>Role for your selection: <b> Co-op participant Role </b></p>"; 
-              $("#innerRole").append(hdr);
-}
-
-function internshipFunction()
-{
-            var hdr = "<p>Role for your selection: <b> Intern Role </b></p>"; 
-              $("#innerRole").append(hdr);
-
-}
-
-function otherRoleFunction()
-{
-               var hdr = "<p>Engagement level for <b> other role </b></p>";  
-               var firstLine= "Indicate the PRIMARY level of student engagement involved in this opportunity. <br />";
-               var radioButton1 = "<input type='radio' name='otherRole' class='rad' value='Receptive' > Receptive (examples: observe, listen, attend) <br />";
-               var radioButton2 = "<input type='radio' name='otherRole' class='rad' value='Active' > Active  (examples: Serve, organize/coordinate, operate, implement, present, participate) <br />";
-                var radioButton3 = "<input type='radio' name='otherRole' class='rad' value='Generative' > Generative (examples: Create, design, write, produce, lead, facilitate, teach, guide, mentor, solve) <br />";
-             $("#innerRole").append(hdr,firstLine,radioButton1,radioButton2,radioButton3); 
-     
-
-}

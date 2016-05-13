@@ -4,8 +4,9 @@ var Schema = mongoose.Schema;
 var skillsSchema = new Schema({
 	user:String,
 	session:{type:Object},
-	fname:String,
-	lname:String
+	skill1:String,
+	skill2:String,
+	skill3:String
 
 });
 

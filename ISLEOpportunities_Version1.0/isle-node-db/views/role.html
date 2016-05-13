@@ -16,10 +16,10 @@
 
 <ul id="progressbar">
 	
-<li>The basics</li>
-<li>Dimensions and Skills</li>
-<li class="active">Student Role</li>
-<li>Requirements and Logistics</li>
+<a href="#"><li>The basics</li></a>
+<a href="#"><li>Dimensions and Skills</li></a>
+<a href="#"><li class="active">Student Role</li></a>
+<a href="#"><li>Requirements and Logistics</li></a>
 
 </ul>
 </div> <!-- Content Div -->
@@ -31,94 +31,28 @@
 
 
 
-<form action="/role" class="regform" method="post">
+<form action="" class="regform" method="post">
 <fieldset>
 <h2 class="title">Student Role</h2>
 <p class="subtitle">Step 3</p>
-<h3> Through this opportunity, students will: </h3>
-<br /> <br />
-<b>Attend personal/professional development (Role = Attendee, Engagement Level = 1 - Receptive Engagement)  </b> <br />
-<div class="StudentRoleDiv">
-<input type="radio" name="studentRole" class="rad attendee" value="Retreat" > Retreat <br />
-<input type="radio" name="studentRole" class="rad attendee" value="Conference" > Conference <br />
-<input type="radio" name="studentRole" class="rad attendee" value="Training" > Training <br />
-<input type="radio" name="studentRole" class="rad attendee" value="Workshop" > Workshop <br />
-<input id="otherAttendee" type="radio" name="studentRole" class="rad attendee" value="Other Attendee" > Other <br />
-<input id="otherAttendeeText" class="text_field" name="Other_Attendee" placeholder="Type here if Other selected for Attendee Role" type="text" hidden Mandatory> <br />
-</div>
-
-<b><input  type="radio" name="studentRole" class="rad Presenter" value="Deliver a performance, exhibit, demonstration, or presentation" > Deliver a performance, exhibit, demonstration, or presentation (Role = Presenter)</b><br />
-<b><input  type="radio" name="studentRole" class="rad Researcher" value="Conduct Research" > Conduct Research (Role = Researcher) </b> <br />
-<b><input  type="radio" name="studentRole" class="rad Maker" value="Complete a non-research project" > Complete a non-research project (Role = Maker) </b> 
+<h3> Type of the opportunity: </h3>
 <br /> <br />
 
-<b>Serve as a leader (Role = Leader) </b><br />
-<div class="StudentRoleDiv">
-<input type="radio" name="studentRole" class="rad Leader" value="Orientation leader" > Orientation leader <br />
-<input type="radio" name="studentRole" class="rad Leader" value="Undergraduate TA" > Undergraduate TA <br />
-<input type="radio" name="studentRole" class="rad Leader" value="Ambassador" > Ambassador <br />
-<input type="radio" name="studentRole" class="rad Leader" value="Health educator" > Health educator <br />
-<input type="radio" name="studentRole" class="rad Leader" value="RA" > RA <br />
-<input type="radio" name="studentRole" class="rad Leader" value="Mentor" > Mentor <br />
-<input type="radio" name="studentRole" class="rad Leader" value="Facilitator" > Facilitator <br />
-<input type="radio" name="studentRole" class="rad Leader" value="Teacher" > Teacher <br />
-<input type="radio" name="studentRole" class="rad Leader" value="Tutor" > Tutor <br />
-<input type="radio" name="studentRole" class="rad Leader" value="Other Leader" > Other <br />
-<input id="otherLeaderText" class="text_field" name="studentRole" placeholder="Type here if Other selected for Leader Role" type="text" hidden Mandatory>
+<div>
+<input type="radio" name="opportunityType" class="rad" > Professional/professional development participation <br />
+<input type="radio" name="opportunityType" class="rad"> Performance, exhibit, demonstration, or presentation delivery<br />
+<input type="radio" name="opportunityType" class="rad"> Research project or service <br />
+<input type="radio" name="opportunityType" class="rad"> Non-research project <br />
+<input type="radio" name="opportunityType" class="rad"> Paraprofessional service <br />
+<input type="radio" name="opportunityType" class="rad">Co-op, employment, or internship <br />
+<input type="radio" name="opportunityType" class="rad"> Volunteer service <br />
+<input type="radio" name="opportunityType" class="rad"> Club participation <br />
+<input type="radio" name="opportunityType" class="rad"> Sports team<br />
+<input type="radio" name="opportunityType" class="rad"> Recreational opportunity <br />
+
 </div>
 <br />
 
-<b>Volunteer (Role = Volunteer)</b>
-<div class="StudentRoleDiv">
-<input type="radio" name="studentRole" class="rad Volunteer" value="Volunteer service (on-campus)" > Volunteer service (on-campus) <br />
-<input type="radio" name="studentRole" class="rad Volunteer" value="Volunteer service (off-campus)" > Volunteer service (off-campus) <br />
-<input type="radio" name="studentRole" class="rad Volunteer" value="Alternative Spring Break" > Alternative Spring Break <br />
-</div>
-<br />
-
-<b><input  type="radio" name="studentRole" class="rad Club" value="Join a Club" > Join a Club </b>
- <br />
-  <br />
-
-<b>Join a Sports Team</b>
-<div class="StudentRoleDiv">
-<input type="radio" name="studentRole" class="rad Team" value="Club" > Club <br />
-<input type="radio" name="studentRole" class="rad Team" value="Varsity" > Varsity <br />
-<input type="radio" name="studentRole" class="rad Team" value="Intramural" > Intramural <br /><br />
-</div>
-
-
-<b>Go on co-op</b>
-<div class="StudentRoleDiv">
-<input type="radio" name="studentRole" class="rad Coop" value="North America" >  North America <br />
-<input type="radio" name="studentRole" class="rad Coop" value="South America" > South America <br />
-<input type="radio" name="studentRole" class="rad Coop" value="Asia" > Asia <br />
-<input type="radio" name="studentRole" class="rad Coop" value="Europe" > Europe <br />
-<input type="radio" name="studentRole" class="rad Coop" value="Africa" > Africa <br />
-<input type="radio" name="studentRole" class="rad Coop" value="Antarctica" > Antarctica <br />
-<input type="radio" name="studentRole" class="rad Coop" value="Australia" > Australia <br /><br />
-</div>
-
-<b><input type="radio" name="studentRole" class="rad Employment" value="Find employment" > Find employment </b>
-
- <br />
-  <br />
-
-<b><input type="radio" name="studentRole" class="rad Internship" value="Find an internship" > Find an internship </b>
-
- <br />
-  <br />  
-
-<b></b>
-
-<input id="otherOpportunity" type="radio" name="studentRole" class="rad OtherOpportunityType" value="Other Opportunity Type"> <b> Other (please specify)</b> <br />
- <input id="otherOpportunityText" class="text_field" name="studentRole" placeholder="Type here if Other selected for Opportunity Type" type="text" hidden Mandatory>
-
-<div id="roleSpecific" >
-
-
-
-</div>	
 
 
 <br />

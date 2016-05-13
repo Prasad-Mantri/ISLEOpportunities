@@ -371,8 +371,10 @@ app.post("/skills",function(req,res){
 	var skill = new Skill({
 		user:req.session.email,
 		session:req.session,
-		fname:req.body.fname,
-		lname:req.body.lname
+		skill1:req.body.Skill1,
+		skill2:req.body.Skill2,
+		skill3:req.body.Skill3
+
 	});
 
 	skill.save(function(err){

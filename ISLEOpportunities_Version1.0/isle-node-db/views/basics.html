@@ -16,10 +16,10 @@
 
 <ul id="progressbar">
 	
-<li class="active">The basics</li>
-<li>Dimensions and Skills</li>
-<li>Student Role</li>
-<li>Requirements and Logistics</li>
+<a href="#"><li class="active">The basics</li></a>
+<a href="#"><li>Dimensions and Skills</li></a>
+<a href="#"><li>Student Role</li></a>
+<a href="#"><li>Requirements and Logistics</li></a>
 
 </ul>
 </div> <!-- Content Div -->
@@ -50,24 +50,22 @@
 <input type="radio" name="OppType" class="rad" value="Face-to-face">Face-to-face <br />
 <input type="radio" name="OppType" class="rad" value="Hybrid">Hybrid <br /> <br />
 </div>
-
 <div id="courseDetailsEntire">
 <h4>B. Course Information: </h4>
-
-<input class="text_field" name="CourseNumber" placeholder="Course Number" type="text">
-<input class="text_field" name="CourseTitle" placeholder="Course Title" type="text"> <br />
+<input class="text_field" name="CourseNumber" placeholder="Course Number" type="text" required>
+<input class="text_field" name="CourseTitle" placeholder="Course Title" type="text" required> <br />
 <b>Select Session: </b><br />
-<input type="radio" name="sessionOpt" class="rad " value="Fall">Fall <br />
+<input type="radio" name="sessionOpt" class="rad " value="Fall" required>Fall <br />
 <input type="radio" name="sessionOpt" class="rad " value="Spring">Spring <br />
 <input type="radio" name="sessionOpt" class="rad " value="Summer">Summer <br />
 <input type="radio" name="sessionOpt" class="rad " value="To be determined">To be determined <br />
 
 <h4>Instructor Details:  </h4>
 
-<input class="" name="last" placeholder="Last Name" type="text">
-<input class="" name="first" placeholder="First Name" type="text">
+<input class="" name="last" placeholder="Last Name" type="text" required>
+<input class="" name="first" placeholder="First Name" type="text" required>
 <input id="singlechar" name="middle" placeholder="Middle initial" type="text" maxlength=1>
-<input class="text_field" name="InstructorEmailAddress" placeholder="Instructor Email Address" type="text">
+<input class="text_field" name="InstructorEmailAddress" placeholder="Instructor Email Address" type="text" required>
 
 </div>
 
@@ -77,20 +75,20 @@
 <div id="courseDetailsWithin">
 <h4>B. Course Information: </h4>
 
-<input class="text_field" name="CourseNumberWithin" placeholder="Course Number" type="text">
-<input class="text_field" name="CourseTitleWithin" placeholder="Course Title" type="text"> <br />
+<input class="text_field" name="CourseNumberWithin" placeholder="Course Number" type="text" required>
+<input class="text_field" name="CourseTitleWithin" placeholder="Course Title" type="text" required> <br />
 <b>Select Session: </b><br />
-<input type="radio" name="sessionOpt" class="rad " value="Fall">Fall <br />
+<input type="radio" name="sessionOpt" class="rad " value="Fall" required>Fall <br />
 <input type="radio" name="sessionOpt" class="rad " value="Spring">Spring <br />
 <input type="radio" name="sessionOpt" class="rad " value="Summer">Summer <br />
 <input type="radio" name="sessionOpt" class="rad " value="To be determined">To be determined <br />
 
 <h4>Instructor Details:  </h4>
 
-<input class="" name="last" placeholder="Last Name" type="text">
-<input class="" name="first" placeholder="First Name" type="text">
-<input id="singlechar" name="middle" placeholder="Middle initial" type="text" maxlength=1>
-<input class="text_field" name="InstructorEmailAddress" placeholder="Instructor Email Address" type="text">
+<input class="" name="last" placeholder="Last Name" type="text" required>
+<input class="" name="first" placeholder="First Name" type="text" required>
+<input id="singlechar" name="middle" placeholder="Middle initial" type="text" maxlength=1 >
+<input class="text_field" name="InstructorEmailAddress" placeholder="Instructor Email Address" type="text" required>
 
 </div>
 
