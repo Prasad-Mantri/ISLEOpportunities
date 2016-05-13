@@ -256,6 +256,23 @@ app.get("/form",function(req,res){
 	res.sendFile(path.join(__dirname+'/views/basics.html'));
 });
 
+app.get("/basic",function(req,res){
+	res.sendFile(path.join(__dirname+'/views/basics.html'));
+});
+
+app.get("/dimskill",function(req,res){
+	res.sendFile(path.join(__dirname+'/views/dimensions.html'));
+});
+
+app.get("/role",function(req,res){
+	res.sendFile(path.join(__dirname+'/views/role.html'));
+});
+
+app.get("/reqt",function(req,res){
+	res.sendFile(path.join(__dirname+'/views/requirements.html'));
+});
+
+
 //transfering from basics to dimension and skills
 app.post("/basics",function(req,res){
 
@@ -362,7 +379,7 @@ app.post("/basics",function(req,res){
 	}
 	
 	
-	res.sendFile(path.join(__dirname+'/views/skills.html'));
+	res.sendFile(path.join(__dirname+'/views/dimensions.html'));
 });
 
 //transfering from basics to skill to dimension
@@ -382,7 +399,7 @@ app.post("/skills",function(req,res){
 		else console.log("skills inseted");
 	});
 
-	res.sendFile(path.join(__dirname+'/views/dimensions.html'));
+	res.sendFile(path.join(__dirname+'/views/role.html'));
 });
 
 //transfering from dimensin to role
@@ -400,7 +417,7 @@ app.post("/dimensions",function(req,res){
 		else console.log("dimensions inserted");
 	});
 	
-	res.sendFile(path.join(__dirname+'/views/role.html'));
+	res.sendFile(path.join(__dirname+'/views/skills.html'));
 });
 
 //transfering from role to requirements and logistics
